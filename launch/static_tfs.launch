@@ -1,0 +1,15 @@
+<launch>
+	<node name="foot_to_neck" pkg="tf" type="static_transform_publisher"
+		args="0 0 0 0 0 0 human_footprint neck 100"/>
+
+	<!-- Not needed, already defined by Myo 1 -->
+	<!--node name="shoulder_fixed_to_myo1" pkg="tf" type="static_transform_publisher"
+		args="? ? ? ? ? ? shoulder_fixed myo1 100"/-->
+
+	<!-- Not needed, already defined by Myo 2 -->
+	<!--node name="elbow_fixed_to_myo2" pkg="tf" type="static_transform_publisher"
+		args="? ? ? ? ? ? elbow_fixed myo2 100"/-->
+
+	<node name="wrist_to_finger" pkg="tf" type="static_transform_publisher"
+		args="0 0 0 0 0 0 wrist finger 100"/>
+</launch>

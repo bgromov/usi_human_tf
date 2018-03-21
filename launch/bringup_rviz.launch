@@ -1,0 +1,5 @@
+<launch>
+    <param name="/use_sim_time" value="true"/>
+    <node type="rviz" pkg="rviz" name="rviz" args="-d $(find usi_human_tf)/config/rviz.rviz" required="true"/>
+    <node type="ground_pointer.py" pkg="usi_human_tf" name="ground_pointer" required="true" output="screen"/>
+</launch>
